@@ -13,7 +13,7 @@
   ],
   "author": "ViscousUI Team",
   "license": "MIT",
-  "version": "1.0.1",
+  "version": "1.0.81",
   "type": "module",
   "main": "./dist/viscous-ui.umd.js",
   "module": "./dist/viscous-ui.es.js",
