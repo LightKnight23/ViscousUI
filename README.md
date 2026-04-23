@@ -15,7 +15,7 @@ ViscousUI provides a set of highly interactive, "viscous" components that respec
 ## Installation
 
 ```bash
-npm install viscous-ui motion lucide-react
+npm install viscous-ui-kit motion lucide-react
 ```
 
 ## Usage
