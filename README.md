@@ -59,4 +59,4 @@ ViscousUI follows a **Functional Monochromatism** approach. Color is reserved fo
 
 ## License
 
-MIT © [Your Name]
+MIT © Eyvar García
