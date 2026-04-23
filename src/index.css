@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Light Mode (Default) */
+  --color-surface: #f9f9f9;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-surface: #1b1b1b;
+  --color-on-surface-variant: #6b6b6b;
+  --color-accent: #000000;
+  --color-on-accent: #ffffff;
+  --color-border: #e2e2e2;
+  
+  --radius-lg: 1.5rem;
+  --radius-xl: 2.5rem;
+}
+
+@layer base {
+  :root {
+    --color-surface: #f9f9f9;
+    --color-surface-container: #eeeeee;
+    --color-surface-container-high: #e8e8e8;
+    --color-on-surface: #1b1b1b;
+    --color-on-surface-variant: #6b6b6b;
+    --color-accent: #000000;
+    --color-on-accent: #ffffff;
+    --color-border: #e2e2e2;
+  }
+
+  .dark {
+    --color-surface: #0a0a0a;
+    --color-surface-container: #141414;
+    --color-surface-container-high: #1f1f1f;
+    --color-on-surface: #f1f1f1;
+    --color-on-surface-variant: #a3a3a3;
+    --color-accent: #ffffff;
+    --color-on-accent: #000000;
+    --color-border: #262626;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased selection:bg-accent selection:text-on-accent transition-colors duration-500;
+  }
+}
+
+.gooey-filter {
+  filter: url('#goo');
+}
+
+@keyframes morph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+  67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+  100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+}
