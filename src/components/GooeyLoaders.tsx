@@ -8,7 +8,12 @@ const GooeyBase = ({ children, className = "" }: { children: React.ReactNode, cl
   </div>
 );
 
-const LoaderCard = ({ children, title }: { children: React.ReactNode, title: string, [key: string]: any }) => (
+interface LoaderCardProps {
+  children: React.ReactNode;
+  title: string;
+}
+
+const LoaderCard = ({ children, title }: LoaderCardProps) => (
   <motion.div initial="rest" whileHover="active" animate="rest" className="w-full h-full cursor-pointer">
     <Card hoverEffect={false} className="group h-[400px] overflow-hidden justify-center items-center relative bg-surface-container transition-all hover:bg-surface-container-high">
       <GooeyBase className="flex-1 w-full h-full">
@@ -116,4 +121,3 @@ export const GooeyLoaders = () => {
     </div>
   );
 };
-

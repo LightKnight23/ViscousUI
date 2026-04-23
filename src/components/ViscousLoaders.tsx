@@ -2,7 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Card } from './Card';
 
-const LoaderCard = ({ children, title }: { children: React.ReactNode, title: string, [key: string]: any }) => (
+interface LoaderCardProps {
+  children: React.ReactNode;
+  title: string;
+}
+
+const LoaderCard = ({ children, title }: LoaderCardProps) => (
   <motion.div initial="rest" whileHover="active" animate="rest" className="w-full h-full cursor-pointer">
     <Card hoverEffect={false} className="group h-[400px] overflow-hidden justify-center items-center relative bg-surface-container transition-all hover:bg-surface-container-high">
       <div className="flex-1 flex items-center justify-center w-full h-full">
@@ -109,5 +114,4 @@ export const ViscousLoaders = () => {
     </div>
   );
 };
-
 

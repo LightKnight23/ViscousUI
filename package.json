@@ -30,11 +30,12 @@
   ],
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
+    "build": "vite build --outDir demo-dist",
     "build:lib": "vite build -c vite.config.lib.ts",
-    "preview": "vite preview",
-    "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "preview": "vite preview --outDir demo-dist",
+    "clean": "rm -rf dist demo-dist",
+    "lint": "tsc --noEmit",
+    "prepack": "npm run clean && npm run build:lib"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

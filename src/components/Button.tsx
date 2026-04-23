@@ -1,15 +1,10 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, type HTMLMotionProps } from 'motion/react';
 import { cn } from '@/src/lib/utils';
 
-interface ButtonProps {
+interface ButtonProps extends HTMLMotionProps<'button'> {
   variant?: 'primary' | 'secondary';
   children?: React.ReactNode;
-  className?: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-  [key: string]: any;
 }
 
 export const Button = ({ variant = 'primary', className, children, ...props }: ButtonProps) => {

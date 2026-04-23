@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
+  type LucideIcon,
   LayoutDashboard, 
   Hourglass, 
   MousePointer2, 
@@ -50,7 +51,14 @@ import { CodeBlock } from '@/src/components/CodeBlock';
 import { ViscousGooFilter } from '@/src/components/ViscousGooFilter';
 import { DocsLibrary } from '@/src/components/DocsLibrary';
 
-const NavItem = ({ icon: Icon, children, active = false, onClick }: { icon: any, children: React.ReactNode, active?: boolean, onClick?: () => void }) => (
+interface NavItemProps {
+  icon: LucideIcon;
+  children: React.ReactNode;
+  active?: boolean;
+  onClick?: () => void;
+}
+
+const NavItem = ({ icon: Icon, children, active = false, onClick }: NavItemProps) => (
   <motion.button
     onClick={onClick}
     whileHover={{ x: 8 }}

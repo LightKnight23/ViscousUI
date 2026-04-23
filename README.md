@@ -37,10 +37,10 @@ export default function App() {
 ### Gooey Loader
 
 ```tsx
-import { MitosisLoader } from 'viscous-ui/loaders';
+import { GooeyLoaders } from 'viscous-ui';
 
 export default function Loading() {
-  return <MitosisLoader />;
+  return <GooeyLoaders />;
 }
 ```
 

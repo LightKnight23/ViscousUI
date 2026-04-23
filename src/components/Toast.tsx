@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { X, CheckCircle, Info, AlertTriangle } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
 
 export type ToastType = 'success' | 'info' | 'warning' | 'error';
 
@@ -9,10 +8,9 @@ interface ToastProps {
   message: string;
   type?: ToastType;
   onClose: () => void;
-  [key: string]: any;
 }
 
-export const Toast = ({ message, type = 'info', onClose }: ToastProps) => {
+export const Toast: React.FC<ToastProps> = ({ message, type = 'info', onClose }) => {
   const icons = {
     success: <CheckCircle size={18} className="text-emerald-500" />,
     info: <Info size={18} className="text-blue-500" />,

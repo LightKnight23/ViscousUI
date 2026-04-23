@@ -1,12 +1,10 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, type HTMLMotionProps } from 'motion/react';
 import { cn } from '@/src/lib/utils';
 
-interface CardProps {
+interface CardProps extends HTMLMotionProps<'div'> {
   children: React.ReactNode;
   hoverEffect?: boolean;
-  className?: string;
-  [key: string]: any;
 }
 
 export const Card = ({ children, className, hoverEffect = true, ...props }: CardProps) => {

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, type LucideIcon } from 'lucide-react';
 import { cn } from '@/src/lib/utils';
 
 interface DropdownOption {
   label: string;
   value: string;
-  icon?: any;
+  icon?: LucideIcon;
 }
 
 interface DropdownProps {
@@ -59,7 +59,7 @@ export const Dropdown = ({ options, value, onChange, placeholder = 'Select...', 
                       : 'text-on-surface hover:bg-surface-container-high'
                   )}
                 >
-                  {option.icon && <option.icon size={16} />}
+                  {option.icon ? <option.icon size={16} /> : null}
                   <span className="font-medium text-sm">{option.label}</span>
                 </button>
               ))}
