@@ -277,7 +277,7 @@ const Overview = () => (
         <h3 className="text-5xl font-black relative z-10 mb-6 uppercase tracking-tighter">v1.0.0 Stable</h3>
         <p className="text-on-accent/80 mb-8 max-w-md relative z-10 font-medium">Ready for high-density production environments.</p>
         <div className="bg-on-accent/10 backdrop-blur-md rounded-full px-10 py-5 font-mono text-sm border border-on-accent/20 relative z-10 flex items-center gap-6 group/code active:scale-95 transition-transform cursor-pointer">
-          <code className="text-lg">npm install viscous-ui</code>
+          <code className="text-lg">npm install viscous-ui-kit</code>
           <div className="p-2 bg-on-accent/10 rounded-full group-hover/code:bg-on-accent/20 transition-colors">
             <Download size={20} />
           </div>

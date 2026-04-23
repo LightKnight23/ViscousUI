@@ -1,5 +1,5 @@
 {
-  "name": "viscous-ui",
+  "name": "viscous-ui-kit",
   "private": false,
   "description": "A high-performance viscous UI component library for React with physics-based animations.",
   "keywords": [
@@ -13,7 +13,7 @@
   ],
   "author": "ViscousUI Team",
   "license": "MIT",
-  "version": "1.0.81",
+  "version": "1.0.82",
   "type": "module",
   "main": "./dist/viscous-ui.umd.js",
   "module": "./dist/viscous-ui.es.js",

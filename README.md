@@ -23,7 +23,7 @@ npm install viscous-ui-kit motion lucide-react
 ### Animated Button
 
 ```tsx
-import { Button } from 'viscous-ui';
+import { Button } from 'viscous-ui-kit';
 
 export default function App() {
   return (
@@ -37,7 +37,7 @@ export default function App() {
 ### Gooey Loader
 
 ```tsx
-import { GooeyLoaders } from 'viscous-ui';
+import { GooeyLoaders } from 'viscous-ui-kit';
 
 export default function Loading() {
   return <GooeyLoaders />;
